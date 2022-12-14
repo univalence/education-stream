@@ -1,4 +1,4 @@
-package io.univalence.education_stream.kafka_streams.io.univalence.education;
+package io.univalence.education;
 
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -34,7 +34,7 @@ public class KafkaTools {
 
 
             ConsumerRecords<String, String> records = consumer.poll(0);
-            ;
+            
             do {
                 for (ConsumerRecord<String, String> record : records) {
                     System.out.printf("p: %d, o: %d, v: %s\n", record.partition(), record.offset(), record.value());

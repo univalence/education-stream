@@ -1,6 +1,7 @@
 package io.univalence.education.stream;
 
 import io.confluent.kafka.schemaregistry.client.CachedSchemaRegistryClient;
+import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;
 import io.confluent.kafka.schemaregistry.client.rest.exceptions.RestClientException;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
@@ -14,9 +15,9 @@ import java.util.Properties;
 
 public class ProducerWithSchemaRegistry {
 
-
     public static void main(String[] args) throws RestClientException, IOException {
-        CachedSchemaRegistryClient schemaRegistryClient = new CachedSchemaRegistryClient("http://localhost:8081", 100);
+        SchemaRegistryClient registryClient =
+                new CachedSchemaRegistryClient("http://localhost:8081", 100);
 
 
 

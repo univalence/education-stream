@@ -21,7 +21,8 @@ lazy val root =
         "org.testcontainers" % "kafka" % libVersion.testcontainers,
         "org.slf4j" % "slf4j-api" % libVersion.slf4j,
         "ch.qos.logback" % "logback-classic" % libVersion.logback,
-        "io.confluent" % "kafka-avro-serializer" % libVersion.confluentPlatform
+        "io.confluent" % "kafka-avro-serializer" % libVersion.confluentPlatform,
+        "com.opencsv" % "opencsv" % "5.7.1"
       )
     )
 

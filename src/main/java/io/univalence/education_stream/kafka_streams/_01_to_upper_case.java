@@ -54,6 +54,8 @@ public class _01_to_upper_case {
         logger.info(topology.describe().toString());
 
         try (var streamService = new KafkaStreams(topology, properties)) {
+
+
             var latch = new CountDownLatch(1);
             streamService.start();
             Runtime.getRuntime().addShutdownHook(new Thread(streamService::close));
